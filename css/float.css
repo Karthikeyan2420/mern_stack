@@ -1,0 +1,23 @@
+body{
+    font-size: 1.5rem;
+}
+.block{
+    background-color: black;
+    width: 30vw;
+    color: aliceblue;
+    height: 30vw;
+    padding: 1rem;
+}
+.left{
+    float: left;
+    margin-right: 10px;
+}
+.clear{
+    clear:both;
+}
+section{
+    display: flow-root;
+    padding: 1rem;
+    background-color: antiquewhite;
+    border: 2px solid red;
+}
