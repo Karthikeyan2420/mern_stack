@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for animation */
+        *{
+            scroll-behavior: smooth;
+        }
+        .animate-fade {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .animate-fade.show {
+            opacity: 1;
+        }
+
+        .form-container {
+            transition: transform 0.6s;
+            transform: scale(1);
+        }
+
+        .form-container:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky top-0">
+        <a class="navbar-brand" href="#">Supermarket</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#register-login">Register/Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home" class="jumbotron text-center bg-primary text-white animate-fade">
+        <h1 class="display-4">Welcome to Supermarket</h1>
+        <p class="lead">One-stop shop for all your daily needs!</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center">About Us</h2>
+        <p class="text-center">We are a leading supermarket chain providing a wide range of groceries, fresh produce, and household essentials.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Supermarket Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Quality Products</h5>
+                        <p class="card-text">We ensure the best quality products at affordable prices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Supermarket Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Customer Satisfaction</h5>
+                        <p class="card-text">Our customers are our top priority. We strive to offer the best shopping experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Supermarket Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Wide Range</h5>
+                        <p class="card-text">From fresh produce to household items, we have everything you need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register & Login Section -->
+    <section id="register-login" class="container py-5">
+        <h2 class="text-center mb-4">Register / Login</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-container bg-light p-4 border rounded animate-fade">
+                    <h3 class="text-center">Register</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="registerFirstName">First Name</label>
+                                <input type="text" class="form-control" id="registerFirstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="registerLastName">Last Name</label>
+                                <input type="text" class="form-control" id="registerLastName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="registerEmail">Email</label>
+                                <input type="email" class="form-control" id="registerEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="registerPassword">Password</label>
+                                <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Register</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-container bg-light p-4 border rounded animate-fade">
+                    <h3 class="text-center">Login</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5 animate-fade">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="contactName">Name</label>
+                        <input type="text" class="form-control" id="contactName" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="Your Email">
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white text-center py-3 animate-fade">
+        <p>&copy; 2024 Supermarket. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Scroll Animation for Sections
+        document.addEventListener("scroll", function() {
+            const elements = document.querySelectorAll(".animate-fade");
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    element.classList.add("show");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
