@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive jQuery Functions Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="base.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            margin: 20px;
+            display: none; /* Initially hidden */
+        }
+        
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .item {
+            padding: 10px;
+            border: 1px solid red;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .highlight{
+            background-color: red;
+        }
+    </style>
+</head>
+<body class="">
+    <h1>Comprehensive jQuery Functions Example</h1>
+    <button id="show">Show Box</button>
+    <button id="hide">Hide Box</button>
+    <button id="toggle">Toggle Box</button>
+    <button id="animate">Animate Box</button>
+    <button id="fade">Fade Box</button>
+    <button id="slide">Slide Box</button>
+    <button id="addItem">Add Item</button>
+    <button id="removeItem">Remove Item</button>
+    
+    <button id="cssChange">Change CSS</button>
+    <button id="textChange">Change Text</button>
+    <button id="inputChange">Change Input</button>
+    <button id="clearInput">Clear Input</button>
+    <button id="clone">Clone Box</button>
+    <button id="detach">Detach Box</button>
+    <button id="append">Append Item</button>
+    <button id="prepend">Prepend Item</button>
+    <button id="cssToggle">Toggle CSS Class</button>
+    <button id="animateReset">Reset Animation</button>
+    <button id="ajaxRequest">Fetch Data</button>
+    
+    <div id="box"></div>
+    <div id="message"></div>
+    <div id="itemContainer"></div>
+    
+    <form id="dataForm">
+        <input type="text" id="inputData" placeholder="Enter some data" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

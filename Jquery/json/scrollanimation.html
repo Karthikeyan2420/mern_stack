@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Animation Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            padding: 50px;
+            height: 100vh;
+        }
+
+        #home {
+            background-color: #f0f0f0;
+        }
+
+        #about {
+            background-color: #e0e0e0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #about.visible {
+            opacity: 1;
+        }
+
+        #contact {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <h1>Home</h1>
+        <p>Scroll down to see the animation.</p>
+    </section>
+
+    <section id="about">
+        <h1>About</h1>
+        <p>This section will fade in when you scroll down to it.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>Contact details go here.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutSection = document.getElementById('about');
+           
+
+            function checkVisibility() {
+                const rect = aboutSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                console.log(rect);
+                console.log(windowHeight);
+                console.log(aboutSection);
+
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    aboutSection.classList.add('visible');
+                } else {
+                    aboutSection.classList.remove('visible');
+                }
+            }
+            // Check visibility on scroll
+            window.addEventListener('scroll', checkVisibility);
+
+            // Initial check in case the section is already in view
+            checkVisibility();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script src="js/Jquery.js"></script>
+    <h1>Livewire</h1>
+    <p>Livewire is first step of coding learning center</p>
+    <button>click here</button>
+
+    <script>
+        $("document").ready(function(){
+
+            $("p").hide()
+            $("h1").html("Livewire Test Data");
+            $("h1").click(function(){
+               $("p").fadeIn("3000")
+            })
+
+            $("button").click(function(){
+
+                $("h1").fadeOut()
+            })
+        });
+    </script>
+
+</body>
+</html>

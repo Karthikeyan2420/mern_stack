@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Animation Examples</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+        }
+
+        .container 
+        {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .box 
+        {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 20px auto;
+        }
+
+        .hidden 
+        {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>jQuery Animation Examples</h1>
+        
+        <button id="fadeInBtn">Fade In</button>
+        <button id="fadeOutBtn">Fade Out</button>
+        <button id="slideUpBtn">Slide Up</button>
+        <button id="slideDownBtn">Slide Down</button>
+        <button id="animateBtn">Animate</button>
+        
+        <div class="box hidden"  id="fadeBox"></div>
+        <div class="box"         id="slideBox"></div>
+        <div class="box"         id="animateBox"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeInBtn").click(function()
+            {
+                $("#fadeBox").fadeIn(5000);
+            });
+
+            $("#fadeOutBtn").click(function()
+            {
+                $("#fadeBox").fadeOut(5000);
+            });
+
+            $("#slideUpBtn").click(function()
+            {
+                $("#slideBox").slideUp(1000);
+            });
+
+            $("#slideDownBtn").click(function()
+            {
+                $("#slideBox").slideDown(1000);
+            });
+
+            
+            $("#animateBtn").click(function() 
+            {
+                $("#animateBox").animate(
+                {
+                    width: "200px",
+                    height: "200px",
+                    marginLeft: "50px",
+                    
+                   
+                },
+                1000, function()
+                {
+                    // Animation complete.
+                    $(this).css('background-color', '#2ecc71');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
